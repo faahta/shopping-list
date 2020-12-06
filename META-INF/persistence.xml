@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0">
+    <persistence-unit name="ShoppingListPersistence" transaction-type="RESOURCE_LOCAL">
+        <class>com.rest.shoppinglist.models.Users</class>
+        <class>com.rest.shoppinglist.models.Category</class>
+        <class>com.rest.shoppinglist.models.Item</class>
+        <class>com.rest.shoppinglist.models.ShoppingList</class>
+        <class>com.rest.shoppinglist.models.UserPrincipal</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/shopping-list" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password" value="password" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/> <!-- DB Dialect -->
+<!--            <property name="hibernate.hbm2ddl.auto" value="none" /> &lt;!&ndash; create / create-drop / update &ndash;&gt;-->
+
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/shopping-list"/>
+            <property name="hibernate.connection.driver_class"
+                      value="org.postgresql.Driver"/> <!-- Show SQL formatted -->
+        </properties>
+</persistence-unit>
+</persistence>
